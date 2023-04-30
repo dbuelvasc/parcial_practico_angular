@@ -15,14 +15,10 @@ export class ComponenteCafeComponent implements OnInit {
   cafeBlend: Cafe[] = Array<Cafe>();
 
   ngOnInit(): void {
-    // let tempDatosUrl = '';
     this.webServiceCafe.getData().subscribe((cafeList) => {
       this.cafeListResponse = cafeList as Array<Cafe>;
-      // console.log(this.cafeListResponse);
       this.cafeOrigin = this.calcularCafe('Café de Origen');
       this.cafeBlend = this.calcularCafe('Blend');
-      // console.log(this.cafeOrigin.length);
-      // console.log(this.cafeBlend.length);
     });
   }
 

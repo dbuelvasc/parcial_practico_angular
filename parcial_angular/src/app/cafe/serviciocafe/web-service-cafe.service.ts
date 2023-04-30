@@ -9,13 +9,6 @@ export class WebServiceCafeService {
   private url = "https://gist.githubusercontent.com/josejbocanegra/e9d24db370ce95b75555f7d1f8691805/raw/8a26ac2bca4183dc88545e14c45851d698911358/202212_MISW4104_Grupo3.json";
   constructor(private http: HttpClient) {}
 
-  // headerDefault(): any {
-  //   var headers = new HttpHeaders({
-  //     'Access-Control-Allow-Origin': '*',
-  //   });
-  //   return headers;
-  // }
-
   getData() {
     return this.http.get(this.url);
   }
